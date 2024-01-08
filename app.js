@@ -1,10 +1,10 @@
 import express from 'express';
 const app = express();
-import authenticateUser from './middleware.js'; // Path to your middleware
+import authenticateUser from '../middleware.js'; // Path to your middleware
 
-import Book  from './bookModel.js'; 
+import Book  from '../BackendTasks/bookModel.js'; 
 
-import {connectDB} from './DB.js'
+import {connectDB} from '../BackendTasks/DB.js'
 
 app.get('/books', authenticateUser, async (req, res) => {
     try {
